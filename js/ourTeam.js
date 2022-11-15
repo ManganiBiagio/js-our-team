@@ -48,8 +48,8 @@ const cardImgElList=document.querySelectorAll(".my-img-card");
 const cardTextElList=document.querySelectorAll(".card-text");
 for(let i=0;i<teamList.length;i++){
     const dipendente=teamList[i];
-    const txt=`${dipendente.nome} svolge il ruolo di ${dipendente.ruolo}`
+    const txt=`<strong>${dipendente.nome}</strong> svolge il ruolo di ${dipendente.ruolo}`
     cardImgElList[i].src="img/"+dipendente.foto;
-    cardTextElList[i].textContent=txt;
+    cardTextElList[i].innerHTML=txt;
     
 }
