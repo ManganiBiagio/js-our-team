@@ -41,3 +41,15 @@ for(let i=0;i<teamList.length;i++){
     e la sua foto è ${dipendente.foto}`
     console.log(txt);
 }
+
+
+//carico le immagini dentro le card dinamicamente
+const cardImgElList=document.querySelectorAll(".my-img-card");
+const cardTextElList=document.querySelectorAll(".card-text");
+for(let i=0;i<teamList.length;i++){
+    const dipendente=teamList[i];
+    const txt=`${dipendente.nome} svolge il ruolo di ${dipendente.ruolo}`
+    cardImgElList[i].src="img/"+dipendente.foto;
+    cardTextElList[i].textContent=txt;
+    
+}
